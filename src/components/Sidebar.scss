@@ -1,0 +1,39 @@
+@import '../Styles/Global.scss';
+
+
+aside {
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    width: 237px;
+    height: 100vh;
+    // border: 1px solid black;
+    .logo{
+        width: 100%;
+        text-align: center;
+        padding: 3em 0;
+        // border: 1px solid rgba(0, 0, 0, 0.548);
+        h3{
+            color: $negro;
+            span {
+                color: $naranja;
+            }
+        }
+    }
+    nav{
+        width: 100%;
+        // border: 1px solid rgba(0, 0, 0, 0.548);
+        padding: 3em 1em;
+        div{
+            text-align: left;
+            padding: 1em 1.5em;
+            a{
+                color: #9E9E9E;
+                font-weight: 500;
+            }
+            .activo{
+                color: $negro;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+button {
+    font-weight: 600;
+}
+.boton1{
+    border: 1px solid #E0E0E0;
+    background: #E0E0E0;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.focus1{
+    background: #AEAEAE !important;
+    border: 1px solid #AEAEAE !important;   
+}
+
+
+.boton2{
+    border: 1px solid #3D5AFE;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: #3D5AFE;
+}
+
+.focus2{
+    background: rgba(41, 98, 255, 0.1)  ;
+    Fill: Solid rgba(41, 98, 255, 0.1)  
+}
+
+// btn text
+
+.botontext{
+    border: none;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: #3D5AFE;
+}
+
+.focustext{
+    background: rgba(41, 98, 255, 0.1)  ;
+    Fill: Solid rgba(41, 98, 255, 0.1)  
+}
+
+//
+
+.disableShadow{
+    border: 1px solid #3D5AFE;
+    background: #3D5AFE;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: white;
+}
