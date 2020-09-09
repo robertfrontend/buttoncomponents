@@ -1,6 +1,9 @@
 button {
     font-weight: 600;
+    cursor: pointer;
 }
+
+// boton1
 .boton1{
     border: 1px solid #E0E0E0;
     background: #E0E0E0;
@@ -14,7 +17,7 @@ button {
     border: 1px solid #AEAEAE !important;   
 }
 
-
+// boton2
 .boton2{
     border: 1px solid #3D5AFE;
     background: transparent;
@@ -30,7 +33,6 @@ button {
 }
 
 // btn text
-
 .botontext{
     border: none;
     background: transparent;
@@ -45,8 +47,7 @@ button {
     Fill: Solid rgba(41, 98, 255, 0.1)  
 }
 
-//
-
+//disablshadow
 .disableShadow{
     border: 1px solid #3D5AFE;
     background: #3D5AFE;
@@ -54,4 +55,144 @@ button {
     font-size: 14px;
     border-radius: 6px;
     color: white;
+}
+
+//botonDisabled
+.botonDisabled{
+    border: none;
+    background: #E0E0E0;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: #9E9E9E;
+}
+
+.focusDisabled{
+    background: transparent;
+}
+
+// boton icos
+.botonIco{
+    width: 100px;
+    border: 1px solid #3D5AFE;
+    background: #3D5AFE;
+    font-size: 14px;
+    border-radius: 6px;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding: 10px 10px;
+    span {
+        padding-left: 0px;
+        i{
+            // position: absolute;
+            // top: auto;
+            // bottom: auto;
+            left: 20px;
+            font-size: 14px !important;
+        }
+    }
+}
+
+.izquierdo{
+    span {
+
+        i{
+            font-size: 14px !important;
+        }
+    }
+}
+
+// tamanos botones
+
+@mixin sizeButton {
+    border: 1px solid #3D5AFE;
+    background: #3D5AFE;
+    width: 73px;
+    height: 32px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 6px;
+    color: white;
+    box-shadow: 0px 2px 3px rgba(0, 49, 202, 0.2);
+}
+
+.botonsm{
+    @include sizeButton();
+    width: 73px;
+    height: 32px;
+}
+.botonmd{
+    @include sizeButton();
+    width: 81px;
+    height: 36px;
+}
+
+.botonlg{
+    @include sizeButton();
+    width: 93px;
+    height: 42px;
+}
+
+// colores
+
+@mixin colorButton {
+    border: 1px solid #E0E0E0;
+    background: #E0E0E0;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 6px;
+    color: #3F3F3F;
+    box-shadow: 0px 2px 3px rgba(0, 49, 202, 0.2);
+}
+
+.default{
+    @include colorButton();
+}
+.default-active {
+    @include colorButton();
+    background: #AEAEAE ;
+    border: 1px solid #AEAEAE;
+
+}
+
+.primary{
+    @include colorButton();
+    background: #3D5AFE;
+    color: white;
+    border: 1px solid #3D5AFE;
+}
+.primary-active{
+    @include colorButton();
+    color: white;
+    background: #0039CB;
+    border: 1px solid #0039CB;
+}
+
+.secundary{
+    @include colorButton();
+    background: #455A64;
+    color: white;
+    border: 1px solid #455A64;
+}
+.secundary-active{
+    @include colorButton();
+    color: white;
+    background: #1C313A;
+    border: 1px solid #1C313A;
+}
+
+
+.danger{
+    @include colorButton();
+    background: #D32F2F ;
+    border: 1px solid #D32F2F;
+    color: white;
+}
+.danger-active{
+    @include colorButton();
+    color: white;
+    background: #9A0007;
+    border: 1px solid #9A0007;
 }
