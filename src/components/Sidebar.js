@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './Sidebar.scss'
 
-const Sidebar = () => {
+const Sidebar = ( {claseLinkOne, claseLinkTwo} ) => {
     return ( 
         <>
             <aside className="sidebar">
@@ -14,34 +15,14 @@ const Sidebar = () => {
                 </div>
                 <nav className='navegation'>
                     <div>
-                        <a href="#!">
-                            Colors
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#!">
-                            Typography
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#!">
-                            Spaces
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#!">
+                        <Link to='/' className={claseLinkOne}>
                             Buttons
-                        </a>
+                        </Link>
                     </div>
                     <div>
-                        <a href="#!" className='activo'>
+                        <Link to='/PageInput' className={claseLinkTwo}>
                             Inputs
-                        </a>
-                    </div>
-                    <div> 
-                        <a href="#!">
-                            Grid
-                        </a>
+                        </Link>
                     </div>
                 </nav>
             </aside>

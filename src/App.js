@@ -1,22 +1,22 @@
 import React from 'react';
+import { BrowserRouter as Routes, Switch, Route } from 'react-router-dom' 
 
-import Sidebar from './components/Sidebar'
-import Header from './components/Header'
-import ListaBotones from './components/ListaBotones';
+
+import ButtonsPage from './pages/ButtonsPage'
+import InputPage from './pages/InputsPage';
+import Layout from './components/Layout';
+
 
 function App() {
   return (
-      <>
-        <div className="app">
-          <Sidebar />
-          <main className='main'>
-            <Header />
-            <div className="todo">
-              <ListaBotones />
-            </div>
-          </main>
-        </div>
-      </>
+    <Routes>
+      <Layout>
+        <Switch>
+          <Route exact path='/' component={ButtonsPage}/>
+          <Route exact path='/PageInput' component={InputPage}/>
+        </Switch>
+      </Layout>
+    </Routes>
   );
 }
 

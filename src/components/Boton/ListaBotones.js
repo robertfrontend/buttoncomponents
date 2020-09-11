@@ -8,75 +8,14 @@ import './StylesButtons.scss'
 
 const ListaBotones = () => {
 
-    // buttons group 1
-    const group1 = [
-        {clase: 'boton1', text: 'Default', id: uuidv4(), desc: '<Button />'},
-        {clase: 'boton1 focus1', text: 'Default', id: uuidv4(), desc: '&:hover, &:focus'},
-
-        {clase: 'boton2', text: 'Default', id: uuidv4(), desc: '<Button variant="outline " />'},
-        {clase: 'boton2 focus2', text: 'Default', id: uuidv4(), desc: '&:hover, &:focus'},
-
-        {clase: 'botontext', text: 'Default', id: uuidv4(), desc: '<Button variant="text " />'},
-        {clase: 'botontext focustext', text: 'Default', id: uuidv4(), desc: '&:hover, &:focus'},
-
-        {clase: 'disableShadow', text: 'Default', id: uuidv4(), desc: '<Button disableShadow />'},
-    ]
-
-    // buttons group 2
-    const group2 = [
-        {clase: 'botonDisabled', text: 'Default', id: uuidv4(), desc: '<Button disabled />'},
-        {clase: 'botonDisabled focusDisabled', text: 'Default', id: uuidv4(), desc: '<Button variant="text" disabled />'},
-    ]
-
-    // buttons group 3
-    const group3 = [
-        {clase: 'botonIco', text: 'Default', id: uuidv4(), desc: '<Button disabled />'},
-        {clase: 'botonIco izquierdo', text: 'Default', id: uuidv4(), desc: '<Button variant="text" disabled />'},
-    ]
-
-
-    // mostrar grupo 1
-    let mostrar1
-    mostrar1 = group1.map(res => (
-        <Boton
-            key={res.id}
-            boton={res.clase}
-            text={res.text}
-            desc={res.desc}
-        />
-    ))
-
-
-    // mostrar grupo 2
-    let mostrar2
-    mostrar2 = group2.map(res => (
-        <Boton 
-            key={res.id}
-            boton={res.clase}
-            text={res.text}
-            desc={res.desc}
-        />
-    ))
-
     let iconoCar = <i className="material-icons md-18">add_shopping_cart</i>
-
-    // mostrar grupo 3
-    let mostrar3
-    mostrar3 = group3.map(res => (
-        <Boton 
-            key={res.id}
-            boton={res.clase}
-            text={res.text}
-            desc={res.desc}
-            icono={iconoCar}
-        />
-    ))
 
     let descFocus = '&:hover, &:focus'
 
+
     return ( 
         <>
-            <div className="botones">
+            <div className="contenedor">
                 <div className="capsu">
                     <div className="padre">
 
@@ -240,6 +179,9 @@ const ListaBotones = () => {
                         </div>  */}
                     </div>
                 </div>
+                <footer>
+                    <p> Robertrm0  @DevChallenges.io</p>
+                </footer>
             </div>
         </>
      );

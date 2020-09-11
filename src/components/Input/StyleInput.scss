@@ -1,0 +1,54 @@
+@mixin estyleInput {
+    width:100%;
+    border: 1px solid #828282;
+    margin:5px 0 ;
+    padding:15px 18px;
+    border-radius: 8px;
+    outline:none;
+    font-size:16px;
+}
+
+@mixin styleLabel {
+    font-weight: 500;    
+}
+
+.label1{
+    color: #333333;
+    @include styleLabel;
+}
+
+.input1{
+    @include estyleInput;
+    border: 1px solid #828282;
+    &:hover{
+        border: 1px solid #333333;
+    }
+    &:focus{
+        border: 1px solid #2962FF;
+    }
+}
+
+.label_error{
+    color: #D32F2F;
+    @include styleLabel;
+}
+.input_error{
+    @include estyleInput;
+    border: 1px solid #D32F2F ;
+    &:hover{
+        border: 1px solid #333333;
+    }
+    &:focus{
+        border: 1px solid #2962FF;
+    }
+}
+
+.input_disabled{
+    @include estyleInput;
+    border: 1px solid #E0E0E0;
+    background: #F2F2F2;
+}
+
+.mr{
+    padding-left: 2.5em;
+}

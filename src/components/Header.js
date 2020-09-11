@@ -1,11 +1,11 @@
 import React from 'react'
 
 
-const Header = () => {
+const Header = ({name}) => {
     return ( 
         <header>
             <h2>
-                Buttons
+                {name}
             </h2>
         </header>
      );
