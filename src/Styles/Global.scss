@@ -1,10 +1,14 @@
 $naranja: #F7542E;
 $negro: #222f3e;
+$negroMas:#333333;
+$gris: #828282;
+
 
 body{
     color: #222f3e;
     a{
         text-decoration: none;
+        outline:none !important;
     }
 }
 
@@ -27,6 +31,10 @@ main{
     width: 100%;
     padding: 4em 7em;
     // border: 1px solid black;
+    button{
+        outline: none !important;
+
+    }
     header{
         width: 100%;
         // border: 1px solid black;
@@ -37,28 +45,10 @@ main{
 }
 
 .contenedor{
-    width: 100%;
-    padding: 1em 0;
+
     .capsu {
-        width: 85%;
-        // border: 1px solid black;
-        padding: 1em 0em;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        // input{
-        //     width: 32%;
-        //     border: none;
-        //     background: none;
-        //     padding-bottom: 1em;
-        //     color: $negro !important;
-        // }
         .padre{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
+
             .container-2{
                 width: 100%;
                 display: flex;

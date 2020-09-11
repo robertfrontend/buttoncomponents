@@ -6,12 +6,10 @@ import Header from '../components/Header';
 const ButtonPage = () => {
     return ( 
         <>
-            <div className="todo">
               <Header 
                 name='Buttons'
               />
               <ListaBotones />
-            </div>
         </>
      );
 }

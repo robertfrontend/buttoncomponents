@@ -1,15 +1,14 @@
 import React from 'react';
 
 
-const Boton = ( {boton, text, desc, icono, iconoIzquierdo, capsu} ) => {
+const Boton = ( {boton, text, desc, icono, iconoIzquierdo} ) => {
 
     if(iconoIzquierdo === '') return null
 
-    let clasepadre = `capsula ${capsu}`
 
     return ( 
         <>
-            <div className={clasepadre}>
+            <div className='capsula'>
                 <p> {desc} </p>
                 <button className={boton} >
                     <span> {icono} </span>

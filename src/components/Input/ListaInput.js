@@ -1,63 +1,57 @@
 import React from 'react'
-import styled from '@emotion/styled'
 
 import './StyleInput.scss'
+import { DivFlex, DivColum, Contenedor } from  '../Style/Style'
 
 import Input from './Input'
 
-const DivFlex = styled.div `
-    width:100%;
-    display:flex;
-    flex-direction:row;
-    padding:10px 0;
-`
-const DivColum = styled.div `
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    padding:10px 0;
-`
 
 let icono = <i className="material-icons md-20">visibility</i> 
+
 
 const ListaInput = () => {
 
     return ( 
         <>
-            <div className="contenedor">
+            <Contenedor className="contenedor">
                 <div className="capsu">
                     <div className="padre">
                         <div className="container-2">
 
                             <DivColum>
                                 <Input 
+                                    type='text'
                                     tituloSeccion='Este es el input normal, tiene 3 estados: normal, hover y active.'
-                                    estilo='input1'
-                                    lableStlye='label1'
+                                    estilo='input_normal normal'
+                                    lableStlye='label_normal'
                                 />
                                 <Input 
-                                    tituloSeccion='Este es el input Error'
-                                    estilo='input_error'
-                                    lableStlye='label1'
+                                    type='text'
+                                    tituloSeccion={`Este es el input`}
+                                    estilo='input_error error'
+                                    lableStlye='label_normal'
                                 />
                                 <Input 
+                                    type='text'
                                     tituloSeccion='Este es el input desactivado'
-                                    estilo='input_disabled'
-                                    lableStlye='label1'
+                                    estilo='input_disabled disabled'
+                                    lableStlye='label_normal'
                                     disabled='disabled'
                                 />
                             </DivColum>
 
                             <DivFlex>
                                 <Input 
+                                    type='text'
                                     tituloSeccion='Input con texto pequeno abajo'
-                                    estilo='input1'
-                                    lableStlye='label1'
+                                    estilo='input_normal normal'
+                                    lableStlye='label_normal'
                                     small='Some interesting text'
                                 />
                                 <Input 
+                                    type='text'
                                     tituloSeccion='Input errror, con pequeno texto abajo'
-                                    estilo='input_error'
+                                    estilo='input_error error'
                                     lableStlye='label_error'
                                     small='Some interesting text'
                                 />
@@ -65,27 +59,39 @@ const ListaInput = () => {
 
                             <DivFlex>
                                 <Input 
+                                    type='number'
                                     tituloSeccion='Input con icono derecho'
-                                    estilo='input1 mr'
-                                    lableStlye='label1'
+                                    estilo='input_normal normal mr'
+                                    lableStlye='label_normal'
                                     small='Some interesting text'
                                     iconDerecha={icono}
                                     />
                                 <Input 
+                                    type='number'
                                     tituloSeccion='Input con icono izquierdo'
-                                    estilo='input1'
-                                    lableStlye='label1'
+                                    estilo='input_normal normal'
+                                    lableStlye='label_normal'
                                     small='Some interesting text'
                                     iconIzquierda={icono}
                                 />
                             </DivFlex>
-                            
+
+                            <DivFlex>
+                                <Input 
+                                    type='number'
+                                    tituloSeccion='Input con icono izquierdo'
+                                    estilo='inputColorVerde'
+                                    lableStlye='label_normal'
+                                    small='Some interesting text'
+                                    iconIzquierda={icono}
+                                />
+                            </DivFlex>
                         </div>
                     
 
                     </div>
                 </div>
-            </div>
+            </Contenedor>
         </>
      );
 }

@@ -1,6 +1,6 @@
-@mixin estyleInput {
+
+@mixin styleInput {
     width:100%;
-    border: 1px solid #828282;
     margin:5px 0 ;
     padding:15px 18px;
     border-radius: 8px;
@@ -9,17 +9,28 @@
 }
 
 @mixin styleLabel {
-    font-weight: 500;    
+    font-weight: 400;    
 }
 
-.label1{
+.normal {
+    border:1px solid #828282;
+}
+.error{
+    border: 1px solid #D32F2F;
+}
+
+.disabled {
+    border: 1px solid #E0E0E0;
+}
+
+// ---Normal---
+
+.label_normal{
     color: #333333;
     @include styleLabel;
 }
-
-.input1{
-    @include estyleInput;
-    border: 1px solid #828282;
+.input_normal{
+    @include styleInput;
     &:hover{
         border: 1px solid #333333;
     }
@@ -28,13 +39,13 @@
     }
 }
 
+// ---Error---
 .label_error{
     color: #D32F2F;
     @include styleLabel;
 }
 .input_error{
-    @include estyleInput;
-    border: 1px solid #D32F2F ;
+    @include styleInput;
     &:hover{
         border: 1px solid #333333;
     }
@@ -43,12 +54,21 @@
     }
 }
 
+// ---Desabilitado---
 .input_disabled{
-    @include estyleInput;
-    border: 1px solid #E0E0E0;
+    @include styleInput;
     background: #F2F2F2;
 }
 
 .mr{
     padding-left: 2.5em;
+}
+
+// ---Other---
+
+
+.inputColorVerde{
+    @include styleInput;
+    border: 1px solid #29ff5f;
+    
 }

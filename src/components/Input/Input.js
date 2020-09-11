@@ -19,6 +19,9 @@ const ContenedorTitulo = styled.div `
 const TituloSecion = styled.p `
     font-weight: 500;
     color:#333333;
+    .danger {
+        color:#D32F2F;
+    }
 `;
 
 const PadreComponent = styled.div `
@@ -52,11 +55,14 @@ const SpanIconIzquierda = styled.span `
     i{
         width:100%;
         height: 100%;
+        color:#222f3e;
     }
 
 `
 
-const Input = ({tituloSeccion,estilo, lableStlye, disabled, small, iconDerecha, iconIzquierda }) => {
+const Input = ({
+    type, tituloSeccion,estilo, lableStlye, disabled, small, iconDerecha, iconIzquierda
+}) => {
 
     return ( 
         <>
@@ -69,10 +75,10 @@ const Input = ({tituloSeccion,estilo, lableStlye, disabled, small, iconDerecha, 
             <InputDiv>
                 <label className={lableStlye} >
                     Label
-                    <SpanInput className='spanInput'>
+                    <SpanInput>
                         <SpanIconIzquierda> {iconIzquierda} </SpanIconIzquierda>
                         <input 
-                            type="text"  
+                            type={type}
                             placeholder='Placeholder'
                             className={estilo}
                             disabled={disabled}
